@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+    <link rel="stylesheet" href="./style.css">
     <title>Formularios</title>
 </head>
 <body>
@@ -13,12 +13,33 @@
     </header>
     <main>
         <article>
+            <h2>Un div con class control_group</h2>
             <form action=""></form>
             <fieldset>
                 <legend>Datos personales</legend>
+                <div class="control_group">
+                    <label for="nombre">Dime tu nombre</label>
+                    <input type="text" name="nombre" id="nombre"> <!-- name imprencindible id recomendable -->
+                    <label for="apellido">Dime tu apellido</label>
+                    <input type="text" name="apellido" id="apellido">
+                </div>
+            </fieldset>    
+            <h2>Dos div con control_group</h2>
+            <form action=""></form>
+            <fieldset>
+                <div class="control_group">
+                    <label for="pais">Tu código de país</label>
+                    <input type="text" name="pais" id="pais" value="ES" maxlength="2">
+                </div>
+                <div class="control_group">
+                    <label for="apellido">Dime tu apellido</label>
+                    <input type="text" name="apellido" id="apellido">
+                </div>
             </fieldset>
         </article>
     </main>
-    footer
+    <footer>
+
+    </footer>
 </body>
 </html>
