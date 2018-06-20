@@ -1,0 +1,23 @@
+{
+  "name": "PaginasWeb_forms",
+  "version": "1.0.0",
+  "description": "Ejercicios de CSS. Unidad del módulo 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Atolsada/PaginasWeb_forms.git"
+  },
+  "keywords": [],
+  "author": "Toni Tolsada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Atolsada/PaginasWeb_forms/issues"
+  },
+  "homepage": "https://github.com/Atolsada/PaginasWeb_forms#readme",
+  "dependencies": {
+    "bootstrap": "^4.1.1"
+  }
+}
