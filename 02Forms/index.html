@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <h1>Formularios</h1>
+        <h1>Formularios</h1> <!-- Para enviar ficheros tienen que ser POST, no GET -->
     </header>
     <main>
         <article>
@@ -115,6 +115,12 @@
             <!-- Los button/input ejecutan la acción pero no envían información -->
             <!-- input suele ser solo texto, button se le suelen poner iconos [link fontawesome al inicio] -->  
             </fieldset>   
+            <fieldset>
+                <legend>Curiosidades</legend>
+                <label for="color">Selecciona color</label>
+                <input type="color" name="color" id="color">
+            </fieldset>
+            
         </article>
     </main>
     <footer>
