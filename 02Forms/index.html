@@ -78,16 +78,43 @@
                 <textarea name="info" id="info" cols="30" rows="10"></textarea>
                 </div>
             </fieldset>
-            </form>
+            <fieldset>
+                <div class="check-true">
+                    <label for="accepted">Leidas y aceptadas las condiciones</label>
+                    <input type="checkbox" name="accepted" id="accepted" required>
+                </div>
+                <div class="check-true">
+                    <input type="checkbox" name="cookies" id="cookies">
+                    <label for="cookies">Aceptar cookies</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Curso</legend>
+                <select name="curso" id="curso" size="3"> <!-- al poner un size no es para seleccionar, te hace lista -->
+                    <option value="Web">Páginas web</option> <!-- Si no ponemos value pilla por defecto el contenido [PáginasWeb] -->
+                    <option value="PHP">Programación PHP</option>
+                    <option value="JS">Javascript</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Turno</legend>
+                <input type="radio" name="turno" id="manana" value="mañana">
+                <label for="manana">Mañana</label>
+                <input type="radio" name="turno" id="tarde" value="tarde">
+                <label for="tarde">Tarde</label>
+<!-- Los radio buttons es recomendable que si hay varias opciones sobre una misma pregunta, COMPARTAN EL NAME -->
+            </fieldset>
+            <fieldset>
             <input type="button" onclick="saludar()" value="Saludo"> <!-- botones en tipo input el texto va en value -->
             <input type="submit" value="Send"> <!-- Envía el action por get si es por get, etc. -->
             <input type="reset" value="Reset"> <!-- Reinicia [submit y reset ya están predefinidas us acciones al no ser que se als editemos principalmente por javascript]-->
             <!-- Entre input y button no hay diferencia, se puede usar el que quieras -->
-            <button type="button" onclick="saludar()">Saludo</button>
-            <button type="submit" class="fas fa-share-square">Enviar</button>
-            <button type="reset">Reinicio</button>  
-            <!-- Los botones ejecutan la acción pero no envían información -->
-            <!-- input suele ser solo texto, button se le suelen poner iconos [link fontawesome al inicio] -->     
+            <button type="button" title="Saludo" class="far fa-handshake" onclick="saludar()"><!-- Saludo --></button>
+            <button type="submit" title="Enviar" class="fas fa-share-square"><!-- Enviar --></button>
+            <button type="reset" title="Borrar" class="fas fa-eraser"><!-- Reinicio --></button>  
+            <!-- Los button/input ejecutan la acción pero no envían información -->
+            <!-- input suele ser solo texto, button se le suelen poner iconos [link fontawesome al inicio] -->  
+            </fieldset>   
         </article>
     </main>
     <footer>

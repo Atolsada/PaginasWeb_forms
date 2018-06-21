@@ -20,9 +20,21 @@ body{
     display: flex;
     justify-content: flex-end;
     width: 60%;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
     
 }
 testarea{
     width: 10rem;
     height: 10rem;
+}
+
+.check-true{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    width: 60%;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    
 }
