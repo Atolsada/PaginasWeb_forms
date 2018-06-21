@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
     <link rel="stylesheet" href="./style.css">
-    <script src="./app.js"></script>
+    <script src="./app.js"></script> <!-- enlace a javascript -->
     <title>Formularios</title>
 </head>
 <body>
@@ -82,10 +83,11 @@
             <input type="submit" value="Send"> <!-- Envía el action por get si es por get, etc. -->
             <input type="reset" value="Reset"> <!-- Reinicia [submit y reset ya están predefinidas us acciones al no ser que se als editemos principalmente por javascript]-->
             <!-- Entre input y button no hay diferencia, se puede usar el que quieras -->
-            <button type="button">Saludo</button>
-            <button type="submit">Enviar</button>
+            <button type="button" onclick="saludar()">Saludo</button>
+            <button type="submit" class="fas fa-share-square">Enviar</button>
             <button type="reset">Reinicio</button>  
-            <!-- Los botones ejecutan la acción pero no envían información -->         
+            <!-- Los botones ejecutan la acción pero no envían información -->
+            <!-- input suele ser solo texto, button se le suelen poner iconos [link fontawesome al inicio] -->     
         </article>
     </main>
     <footer>
