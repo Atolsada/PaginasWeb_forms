@@ -14,18 +14,19 @@
     <main>
         <article>
             <h2>Un div con class control_group</h2>
-            <form action=""></form>
+            <form action="">
             <fieldset>
                 <legend>Datos personales</legend>
                 <div class="control_group">
                     <label for="nombre">Dime tu nombre</label>
                     <input type="text" name="nombre" id="nombre"> <!-- name imprencindible id recomendable -->
                     <label for="apellido">Dime tu apellido</label>
-                    <input type="text" name="apellido" id="apellido">
+                    <input type="text" name="apellido" id="apellido"> <!-- name es para saber el server lo que se envia, id es para identificarlo en el código -->
                 </div>
             </fieldset>    
+            </form>
             <h2>Varios div con control_group</h2>
-            <form action=""></form>
+            <form action="">
             <fieldset>
                     <legend>Datos personales</legend>
                 <div class="control_group">
@@ -45,7 +46,10 @@
                     <input type="password" name="contraseña" id="contraseña" required>
                 </div>
             </fieldset>
+            </form>
+            <form action="">
             <fieldset>
+                </form>
                     <legend>Datos personales</legend>
                 <div class="control_group">
                     <label for="correo">Correo electrónico</label> <!-- Hay que escribir con pinta de correo -->
@@ -64,6 +68,23 @@
                     <input type="text" name="search" id="search">
                 </div>
             </fieldset>
+            </form>
+            <form action="">
+            <fieldset>
+                <legend>Información extra</legend>
+                <div class="textarea-group">
+                <textarea name="info" id="info" cols="30" rows="10"></textarea>
+                </div>
+            </fieldset>
+            </form>
+            <input type="button" value="Saludo"> <!-- botones en tipo input el texto va en value -->
+            <input type="submit" value="Send"> <!-- Envía el action por get si es por get, etc. -->
+            <input type="reset" value="Reset"> <!-- Reinicia [submit y reset ya están predefinidas us acciones al no ser que se als editemos principalmente por javascript]-->
+            <!-- Entre input y button no hay diferencia, se puede usar el que quieras -->
+            <button type="button">Saludo</button>
+            <button type="submit">Enviar</button>
+            <button type="reset">Reinicio</button>  
+            <!-- Los botones ejecutan la acción pero no envían información -->         
         </article>
     </main>
     <footer>
