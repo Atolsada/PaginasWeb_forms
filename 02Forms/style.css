@@ -38,3 +38,12 @@ testarea{
     margin-bottom: 0.3rem;
     
 }
+
+*:required{
+    box-shadow: 0.1rem;
+    color: cyan;
+}
+
+input[type="checkbox"]{
+    color:violet;
+}
