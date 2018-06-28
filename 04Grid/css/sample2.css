@@ -1,5 +1,5 @@
 body{
-	font: 3rem sans-serif;
+	font: 1rem sans-serif;
 	background-color: rgba(0,0,0,.2);
 	color: white;
 }
@@ -30,5 +30,32 @@ body{
 }
 
 .grid-container :nth-child(1){
-    background: salmon;
+    background: salmon; /* <--- para que veamos donde estamos */
+    /*grid-column: 2/4;  igual que abajo en comentario
+    grid-column-start: 2;
+    grid-column-end: 4; */
+    GRID-COLUMN:2/span 2;
+
+}
+
+.grid-container :nth-child(3){
+    background: crimson; 
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 2/4; /* igual que abajo en comentario
+    grid-row-start: 2;
+    grid-row-end: 4; */
+}
+
+.grid-container :nth-child(2){
+    background: deeppink; 
+    grid-column: 3/4;
+    grid-row: 2/4;
+}
+
+.grid-container :nth-child(4){
+    background: darkslateblue;
+    grid-column: 3/4;
+    grid-row: 2/4;
+    opacity: 0.6;
 }
