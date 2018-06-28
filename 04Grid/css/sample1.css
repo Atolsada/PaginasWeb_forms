@@ -4,7 +4,7 @@ body{
 	color: white;
 }
 .grid-item:nth-child(2n){
-	background-color: #1A83B5;
+	background-color: rgb(10, 103, 146);
 }
 .grid-item:nth-child(2n+1){
 	background-color: #37A8E0;
@@ -18,10 +18,39 @@ body{
 }
 
 /* GRID ************************/
-.grid-container {
+/*.grid-container {
     display: grid;
-    grid-template-columns: 10rem, 10rem, 10rem; /* <---No me lo lee */
+    grid-template-columns: 10rem, 10rem, 10rem;  <---No me lo lee 
     grid-template-rows: 10rem, 10rem, 10rem;
     grid-column-gap: 1rem;
     grid-row-gap: 2rem;
+    grid-auto-rows: 12rem;
+}*/
+
+/*Copiado del profesor*/
+
+.grid-container {
+    display: grid;
+    grid-column-gap: 1rem;
+    grid-row-gap: 2rem;
 }
+.grid-container {
+    grid-template-columns: 10rem 15rem 10rem;
+    grid-template-rows:  10rem 15rem;
+    grid-auto-rows: 12rem;
+}
+.grid-container {
+    grid-template-columns: 1fr 2fr 1fr; /* <--- 25% 50% 25% por así decir */
+    /* grid-template-columns: minmax(10rem, 1fr) 2fr 1fr; <--- Se aplica a la primera columna de minimo 10rem */
+    grid-template-rows: repeat(4, 10vh); /* <--- 10vh, 10vh, 10vh, 10vh */
+    grid-auto-rows: 12vh;
+}
+/* unidad (fr) fraction ratio,"vale X fracción del total" sólo vale en grid */
+
+.grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));;
+    grid-template-rows:  repeat(2, 10vh 15vh) ;
+    grid-auto-rows: 12vh;
+}
+
+
