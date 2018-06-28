@@ -9,10 +9,19 @@ body{
 .grid-item:nth-child(2n+1){
 	background-color: #37A8E0;
 }
-.grid_container{
+.grid-container{
 	padding: 1rem;
 }
 .grid-item{
-	padding: 1.5rem; /* <--hay que dar padding o no se ve */
+	padding: 1.5rem;
 	border-radius: 1rem;
+}
+
+/* GRID ************************/
+.grid-container {
+    display: grid;
+    grid-template-columns: 10rem, 10rem, 10rem; /* <---No me lo lee */
+    grid-template-rows: 10rem, 10rem, 10rem;
+    grid-column-gap: 1rem;
+    grid-row-gap: 2rem;
 }
