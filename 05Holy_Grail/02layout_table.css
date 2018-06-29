@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+	background-color: rgb(0, 0, 0);
+	text-transform: uppercase;
+	color: white;
+}
+
+.item{
+    padding: 1.5rem;
+    margin: 1rem 0;
+	border-radius: .3rem;
+    background-color: #E92763;
+    min-height: 10vh;
+}
+table_wrapper{
+    display: table;
+}
+nav, main, aside{
+    display: table-cell;
+    width: 100% /* para que ocupe todo el ancho */
+}
+nav, aside{
+    width: 20%;
+}
+main{
+    width: 60%;
+}
