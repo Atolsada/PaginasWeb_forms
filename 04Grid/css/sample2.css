@@ -17,7 +17,8 @@ body{
 	border-radius: 1rem;
 }
 
-/* GRID ************************/
+/* GRID CONTAINER ************************/
+
 .grid-container {
     display: grid;
     grid-gap: 1rem;
@@ -29,12 +30,14 @@ body{
     grid-auto-rows: 12vh;
 }
 
+/* GRID ITEMS ************************/
+
 .grid-container :nth-child(1){
     background: salmon; /* <--- para que veamos donde estamos */
     /*grid-column: 2/4;  igual que abajo en comentario
     grid-column-start: 2;
     grid-column-end: 4; */
-    GRID-COLUMN:2/span 2;
+    GRID-COLUMN:2/span 2; /* empieza en la dos y extiendete dos */
 
 }
 
