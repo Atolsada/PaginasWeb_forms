@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pug": "pug -w -P ./06Pug -o"
+    "pug": "pug -w -P ./06Pug/src -o ./06Pug/dist"
   },
   "repository": {
     "type": "git",
