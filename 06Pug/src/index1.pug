@@ -1,10 +1,17 @@
+- var idioma ="es"
+- const METALENGUAJE ="Pug"
+- let titulo =`Iniciando ${METALENGUAJE}`
+- let menuItems = ['Home','About']
+
+
 <!DOCTYPE html>
-html(lang="es")
+html(lang="idioma") 
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Iniciando Pug
+        //-title #{titulo}
+        title= titulo
     body
 
     // Esto es un comentario
@@ -34,15 +41,65 @@ html(lang="es")
         Nesciunt non fugit repellendus cupiditate error eligendi totam, ipsum neque, deleniti, 
         Quaerat dignissimos consequatur minus sint qui cumque suscipit fugiat reiciendis sequi.
 
-    // Elementos inline
+    //- Elementos INLINE
 
     p Ejemplos de 
         b Pug
 
     h1 Ejemplos de 
         i Pug
+        //- Añadiendo JS
+    h1 Ejemplos de 
+        i #{METALENGUAJE}
+        
     p Pug es un 
         b lenguaje de plantillas 
         | basado en JS
 
     p Pug es un <b>lenguaje de plantillas</b> basado en JS
+
+    //- Atributos (no dejar espacio junto a los parentesis)
+
+    div(id="div1", class="principal", title="Los atributos que queramos")
+
+    //- Atajo: Atributos id y class
+
+    div#div2.principal.
+
+    //- Atajo: Crea un div y añade el atributo correspondiente
+
+    #div3.principal
+
+    //- Bloques de expansion
+
+    nav
+        ul
+            li
+                a(href="#home") Home
+            li
+                a(href="#about") About
+
+    nav
+        ul 
+            li: a(href="#home") Home
+            li: a(href="#about") About
+    
+
+    //- Añadiendo el JS
+
+    nav
+        ul
+            li: a(href="#Home") #{menuItems[0]}
+            li: a(href="#About") #{menuItems[1]}
+    
+    nav
+        ul
+            li: a(href="#"+menuItems[0].toLowerCase()) #{menuItems[0]}
+            li: a(href="#"+menuItems[1].toLowerCase()) #{menuItems[1]}
+
+    nav
+        ul
+            - let url = "#"+menuItems[0].toLowerCase()
+            -let url2 = "#"+menuItems[1].toLowerCase()
+            li: a(href="#url") #{menuItems[0]}
+            li: a(href="#url2") #{menuItems[1]}
