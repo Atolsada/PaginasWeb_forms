@@ -6,4 +6,24 @@ html(lang="idioma")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title titulo
     body
-        h1 Pagina 2
+        h1 Pug avanzado.
+
+        //- Lógica mediante JS
+
+        -let nombre = 'Pepe'
+        //-let nombre = 'Maria'
+        -if (nombre == 'Pepe'){
+            p Hola otra vez, Pepe
+        - } else {
+            p Hola #{nombre}, ¿Donde está Pepe?
+        - }
+
+        //- Lógica nativa (build-in) Pug
+
+        //- nombre = 'Pepe'
+        - nombre = 'Maria'
+        if (nombre == 'Pepe')
+            p Hola otra vez, Pepe
+        else 
+            p Hola #{nombre}, ¿Donde está Pepe?
+        
