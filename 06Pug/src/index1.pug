@@ -105,3 +105,11 @@ html(lang="idioma")
             - let url2 = "#"+menuItems[1].toLowerCase()
             li: a(href="#url") #{menuItems[0]}
             li: a(href="#url2") #{menuItems[1]}
+    
+    //- Variables con HTML [NO SE PUEDE Inyectar html -inyeccion maliciosa de html]
+
+    -let html = "<p>Esto es un parrafo</p>"
+    div= html
+
+    -let html = "<script>alert('Estas infectado')</script>"
+    div!= html
