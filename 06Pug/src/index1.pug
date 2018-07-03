@@ -51,7 +51,7 @@ html(lang="idioma")
         //- Añadiendo JS
     h1 Ejemplos de 
         i #{METALENGUAJE}
-        
+
     p Pug es un 
         b lenguaje de plantillas 
         | basado en JS
@@ -100,6 +100,6 @@ html(lang="idioma")
     nav
         ul
             - let url = "#"+menuItems[0].toLowerCase()
-            -let url2 = "#"+menuItems[1].toLowerCase()
+            - let url2 = "#"+menuItems[1].toLowerCase()
             li: a(href="#url") #{menuItems[0]}
             li: a(href="#url2") #{menuItems[1]}
