@@ -26,4 +26,42 @@ html(lang="idioma")
             p Hola otra vez, Pepe
         else 
             p Hola #{nombre}, ¿Donde está Pepe?
-        
+
+    
+        //- Case sustituye - switch  when sustituye - case.
+        //- default - cualquier otra cosa que no cumpla los casos anteriores
+
+        - name = 'Pepe'
+        // - name = 'Alicia'
+        // - name = 'Juan'
+        case name
+            when 'Pepe'
+                p Hola Pepe, ¿Como estás?
+            when 'Alicia'
+                p Que tal, Alicia
+            default
+                p Hola #{name}|
+
+        //- Iteraciones
+        //- each VAL,[KEY] in OBJ - VAL -> variable, OBJ-> objeto
+
+        - let aSecciones = ['Inicio', 'Porfolio', 'Clientes','About']
+            nav
+                ul
+                    each seccion in aSecciones
+                        li: a(href="#"+seccion.toLowerCase())=seccion
+
+        //- HAY QUE FIXEARLO - lo de abajo es un array de objetos con 2 propiedades, nombre y codigo, y lo que quiero que se vea en value es el codigo
+        - let aOpciones = [
+            {nombre: 'C#', codigo:'37'},
+            {nombre: 'Java', codigo:'84'},
+            {nombre: 'JavaScript', codigo:'13'}]
+        - let oName = 'cursos'
+        form(action="")
+            label(for=oName) Selecciona un curso
+            select(name=oName id=oName)
+                each aOpcion in [aOpciones] //-aOpcion antes era val, valida igual. suele ponerse en singular por que es el dato que coje por vuelta de aOpciones
+                    option(value=opcion.codigo)=opcion.nombre
+                button(type="submit") Enviar
+                    
+                
