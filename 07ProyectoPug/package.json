@@ -1,11 +1,11 @@
 {
-  "name": "PaginasWeb_forms",
+  "name": "ProyectoPug",
   "version": "1.0.0",
   "description": "Ejercicios de CSS. Unidad 3 del módulo 1",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pug": "pug -w -P -O ./06Pug/src/config.json ./06Pug/src -o ./06Pug/dist",
+    "pug": "pug -w -P -O ./config.json ./src/pug -o ./dist",
     "server": "http-server",
     "start": "parallelshell \"npm run server\" \"npm run pug\" "
   },
