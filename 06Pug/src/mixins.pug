@@ -1,0 +1,31 @@
+mixin cabecera()
+    header
+        h1 Mixins en Pug - se podría usar en varias páginas al mismo tiempo si se importase
+
+mixin menu(aItems)
+    nav
+        ul
+            each item in aItems
+                li: a(href="#"+item.toLowerCase())=seccion
+
+mixin footer()
+    footer
+        address Toni Tolsada
+        small CacahueteTeam
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Mixins
+    body
+        +cabecera()
+        -let aSecciones=['Inicio', 'Portfolio', 'clientes', 'About']
+        +menu(aSecciones)
+        main
+            p Falta por hacer
+        - aSocial=['Facebook', 'Twitter', 'GitHub']
+        +menu(aSocial)
+        +footer()
