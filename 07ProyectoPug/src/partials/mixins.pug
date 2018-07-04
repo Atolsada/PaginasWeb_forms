@@ -1,0 +1,25 @@
+-
+    let aSecciones = [
+        {label:'Inicio', url:"./index.html"},
+        {label:'Porfolio', url:"./port.html"},
+        {label:'Clientes', url:"./cli.html"},
+        {label:'Acerca de', url:"./about.html"}]
+
+mixin menu(aItems)
+    nav
+        ul
+            each item in aItems
+                li: a(href=item.url)=item.label
+
+-
+    let aSocial = [
+        {label:'Twitter', url:"http://www.Twitter.es"},
+        {label:'Twitch', url:"http://www.Twitch.tv"},
+        {label:'Facebook', url:"http://www.Facebook.es"},
+        {label:'YouTube', url:"http://www.YouTube.es"}]
+
+mixin menuSocial(aItems)
+    nav
+        ul
+            each item in aItems
+                li: a(href=item.url)=item.label
