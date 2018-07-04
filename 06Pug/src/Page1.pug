@@ -53,14 +53,14 @@ html(lang=idioma)
                 each seccion in aSecciones
                     li: a(href="#"+seccion.toLowerCase())= seccion
 
-        -let aSections = ['Home', 'Porfolio', 'Clients', 'About']
+        - let aSections = ['Home', 'Porfolio', 'Clients', 'About']
         nav
             ul
                 - let i = 0
                 while i < aSections.length
                     li: a(href="#"+aSections[i].toLowerCase())= aSections[i]
                     -i++                      
-            
+
         //-let aOpciones = [ {nombre: 'C#', codigo:'37'}, {nombre: 'Java', codigo:'84'}, {nombre: 'JavaScript', codigo:'13'}] 
         -let aOpciones = cursos
         -let optName = 'cursos'
@@ -70,7 +70,7 @@ html(lang=idioma)
                 each opcion in aOpciones
                     option(value=opcion.codigo)= opcion.nombre
                 button(type="submit") Enviar
-                
+
         //- Iteraciones EACH
         //- El tope es aSections.length
         //- [i] es lo que aumenta cada vuelta
