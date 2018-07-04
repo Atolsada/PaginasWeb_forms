@@ -1,0 +1,30 @@
+{
+  "name": "PaginasWeb_forms",
+  "version": "1.0.0",
+  "description": "Ejercicios de CSS. Unidad 3 del módulo 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pug": "pug -w -P -O ./06Pug/src/config.json ./06Pug/src -o ./06Pug/dist",
+    "server": "http-server",
+    "start": "parallelshell \"npm run server\" \"npm run pug\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Atolsada/PaginasWeb_forms.git"
+  },
+  "keywords": [],
+  "author": "Toni Tolsada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Atolsada/PaginasWeb_forms/issues"
+  },
+  "homepage": "https://github.com/Atolsada/PaginasWeb_forms#readme",
+  "dependencies": {
+    "bootstrap": "^4.1.1"
+  },
+  "devDependencies": {
+    "pug": "^2.0.3",
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}
