@@ -47,12 +47,12 @@ html(lang=idioma)
         //- each VAL,[KEY] in OBJ - VAL -> variable, OBJ-> objeto
         //-aOpcion antes era val, valida igual. suele ponerse en singular por que es el dato que coje por vuelta de aOpciones
 
-       - let aSecciones = ['Inicio', 'Porfolio', 'Clientes', 'About']
+        - let aSecciones = ['Inicio', 'Porfolio', 'Clientes', 'About']
         nav
             ul
                 each seccion in aSecciones
                     li: a(href="#"+seccion.toLowerCase())= seccion
-            
+
         -let aSections = ['Home', 'Porfolio', 'Clients', 'About']
         nav
             ul
@@ -69,14 +69,16 @@ html(lang=idioma)
             select(name=optName id=optName)
                 each opcion in aOpciones
                     option(value=opcion.codigo)= opcion.nombre
-            button(type="submit") Enviar
+                button(type="submit") Enviar
                 
         //- Iteraciones EACH
-
+        //- El tope es aSections.length
+        //- [i] es lo que aumenta cada vuelta
+        //- -i++ ---> cada vuelta añado
         -let aSections = ['Home', 'Porfolio', 'Clients', 'About']
         nav
             ul
                 - let i = 0
-                while i < aSections.length //- El tope es este
-                    li: a(href="#"+aSections[i].toLowerCase())= aSections[i] //- aumenta la [i]
-                    -i++ //- cada vuelta, añado
+                while i < aSections.length 
+                    li: a(href="#"+aSections[i].toLowerCase())= aSections[i]
+                    -i++
