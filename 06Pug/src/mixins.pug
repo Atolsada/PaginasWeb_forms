@@ -19,6 +19,14 @@ mixin input(name)
         label(for=name.toLowerCase())= name+": " 
         block 
 
+mixin formulario()
+    form(action="") 
+                ul
+                    +input("Color")
+                        input(type="text" id="color" name="color")
+                    +input("Comentarios")
+                        textarea(name="comentarios", cols="30", rows="10")
+
 <!DOCTYPE html>
 html(lang="en")
     head
@@ -33,12 +41,7 @@ html(lang="en")
         main
             p Falta por hacer
 
-            form(action="") 
-                ul
-                    +input("Color")
-                        input(type="text" id="color" name="color")
-                    +input("Comentarios")
-                        textarea(name="comentarios", cols="30", rows="10")
+            +formulario()
 
         - aSocial=['Facebook', 'Twitter', 'GitHub']
         +menu(aSocial)
