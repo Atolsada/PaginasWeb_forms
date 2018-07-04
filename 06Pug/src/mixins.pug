@@ -13,6 +13,11 @@ mixin footer()
         address Toni Tolsada
         small CacahueteTeam
 
+mixin input(name)
+    li 
+        label(for=name.toLowerCase())= name+": " 
+        block 
+
 <!DOCTYPE html>
 html(lang="en")
     head
@@ -26,6 +31,14 @@ html(lang="en")
         +menu(aSecciones)
         main
             p Falta por hacer
+
+            form(action="") 
+                ul
+                    +input("Color")
+                        input(type="text" id="color" name="color")
+                    +input("Comentarios")
+                        textarea(name="comentarios", cols="30", rows="10")
+
         - aSocial=['Facebook', 'Twitter', 'GitHub']
         +menu(aSocial)
         +footer()
