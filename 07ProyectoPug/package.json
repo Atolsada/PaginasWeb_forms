@@ -8,8 +8,9 @@
     "pug": "pug -w -P -O ./config.json ./src/pug -o ./dist ./src/partials",
     "server": "http-server",
     "start": "parallelshell \"npm run server\" \"npm run pug\" \"npm run sass:watch\" ",
-    "sass": "sass scss:css",
-    "sass:watch": "nodemon -e scss -x \"sass scss:css\""
+    "startFull": "parallelshell \"npm run server\" \"npm run pug\" \"npm run sass:watch\" ",
+    "sass": "sass src/sass:dist/css",
+    "sass:watch": "nodemon -e src/sass -x \"npm run sass\""
   },
   "repository": {
     "type": "git",
