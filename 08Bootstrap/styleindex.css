@@ -1,0 +1,18 @@
+.header-wrapper, .footer-wrapper {
+    background-color: darksalmon;
+    color: brown;
+}
+
+.header-wrapper {
+    margin-bottom: 3rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+
+}
+
+.footer-wrapper {
+    border-top: 1px solid gainsboro;
+    margin-top: 3rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
