@@ -10,7 +10,7 @@
     "start": "parallelshell \"npm run server\" \"npm run pug\" \"npm run sass:w\" ",
     "sass": "sass src/sass:dist/css",
     "sass:watch": "nodemon -e scss -x \"npm run sass\"",
-    "sass:w":"node-sass -watch ./src/sass -o ./dist/css"
+    "sass:w":"node-sass --watch ./src/sass -o ./dist/css"
   },
   "repository": {
     "type": "git",
