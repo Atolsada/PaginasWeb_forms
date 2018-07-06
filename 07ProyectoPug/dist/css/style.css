@@ -1,24 +1,18 @@
 * {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 nav ul {
-  list-style: none;
-}
-nav ul a {
-  text-decoration: none;
-  color: inherit;
-}
+  list-style: none; }
+  nav ul a {
+    text-decoration: none;
+    color: inherit; }
+
 body {
-  background-color: bisque;
-}
+  background-color: aquamarine; }
 
 nav {
   display: flex;
-}
+  width: 100%; }
 
 img {
-  width: 50%;
-}
-
-/*# sourceMappingURL=dist/css/style.css.map */
+  width: 50%; }
